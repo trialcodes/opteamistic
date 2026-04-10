@@ -19,6 +19,92 @@ body.light{
 --text:#000;
 }
 
+	
+/* =========================
+   MOBILE RESPONSIVE VIEW
+========================= */
+
+@media (max-width: 1024px){
+
+/* reduce big side padding */
+#menu{
+padding-left: 20px;
+padding-right: 20px;
+}
+
+/* 3 columns → 2 columns */
+.products{
+grid-template-columns:repeat(2, 1fr);
+}
+
+/* header becomes smaller */
+header{
+flex-direction:column;
+gap:10px;
+padding:10px;
+}
+
+nav a{
+font-size:14px;
+margin:0 5px;
+}
+
+/* cart becomes full height better */
+.cart{
+width:260px;
+height:70vh;
+}
+}
+
+@media (max-width: 600px){
+
+/* 2 columns → 1 column (IMPORTANT) */
+.products{
+grid-template-columns:1fr;
+}
+
+/* hero text spacing */
+.hero h1{
+font-size:24px;
+}
+
+.hero p{
+font-size:14px;
+}
+
+/* menu padding tighter */
+#menu{
+padding-left:10px;
+padding-right:10px;
+}
+
+/* cards cleaner spacing */
+.card img{
+height:200px;
+}
+
+/* footer stacks clean */
+.footer{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+/* cart full width slide */
+.cart{
+width:100%;
+right:-100%;
+}
+
+.cart.open{
+right:0;
+}
+
+.cart-toggle{
+top:120px;
+right:10px;
+}
+}
+
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
 body{
 background:var(--bg);
